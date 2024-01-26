@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="styles.css">
+ <script src="https://kit.fontawesome.com/yourcode.js" crossorigin="anonymous"></script>
+   
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+   <style>
+        body{
+            background-color: black;
+            color: aqua;
+        }
+
+        .navbar-light .navbar-nav .nav-link {
+            color: yellow;
+        }
+
+        .carousel-item img {
+            width: 100%;
+            height: auto;
+        }
+
+        .carousel-control-prev, .carousel-control-next {
+            background-color: rgba(0,0,0,0.5);
+            width: auto;
+            border-radius: 5px;
+            font-size: 30px;
+        }
+
+        .carousel-control-prev-icon, .carousel-control-next-icon {
+            background-color: white;
+        }
+
+        .carousel-control-prev:hover, .carousel-control-next:hover {
+            background-color: rgba(0,0,0,0.8);
+        }
+        .oiu:hover{
+            color: rgb(51, 181, 159);
+        }
+        .yui:hover{
+            color: black;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: large;
+            font-weight: bold;
+            transition: cubic-bezier(0.785, 0.135, 0.15, 0.86);
+            text-align: center;
+        
+        }
+   
+    </style>
+    <title>Bootstrap Example</title>
+</head>
+
+<body>
+ 
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      
+        <a  href="https://www.kongu.ac.in/" target="_blank"><img  style="width: 200px; height: 50px;" src="data:image/png;base64,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"></a>
+        <a class="navbar-brand" href="https://www.kongu.ac.in/departments/ai.php" target="_blank" style=" color: blanchedalmond; margin-left: 10px;" >  AIDS - B</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+            aria-controls="navbarNav" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item active">
+                    <a class="nav-link" href="#"><span class="oiu">Home</span> <i class="fa fa-home"  style="color: rgb(168, 198, 255);"></i> <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="facultyDropdown" role="button"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" >
+                        <span class="oiu"> Faculty </span><i class="fa fa-user" style="color:rgb(168, 198, 255);"></i>
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="facultyDropdown" style="background-color: black;;">
+                        <a style="color: rgb(52, 134, 134);" class="dropdown-item" href="https://docs.google.com/document/d/e/2PACX-1vSqrlZxosExaoFdVhGAiUGjfE9c-Zoi780H3wCdkhf_cFvH1x5Hnw3oGKCxQHLeSQ/pub"target="_blank" ><span class="yui">EIT<i class="fa fa-bookmark"></i></span></a>
+                        <a style="color: rgb(52, 134, 134);" class="dropdown-item" href="https://docs.google.com/document/d/e/2PACX-1vSrXwxXX2Jzfu3R5pH2Q4Dwlr6YGHb44_t2d3ecnXW9BwDoY3Is5PST87SSPa75N-5_4GHbesHY5_Y6/pub" target="_blank"><span class="yui">C PROGRAMMING <i class="fa fa-bookmark"></i></span></a>
+                        <a style="color: rgb(52, 134, 134);" class="dropdown-item" href="https://sites.google.com/a/kongu.edu/deeparani-physics/" target="_blank"><span class="yui">PHYSICS <i class="fa fa-bookmark"></span></i></a>
+                        <a style="color: rgb(52, 134, 134);" class="dropdown-item" href="https://sites.google.com/a/kongu.edu/hari-maths" target="_blank"><span class="yui">MATHS <i class="fa fa-bookmark"></i></span></a>
+                        <a style="color: rgb(52, 134, 134);" class="dropdown-item" href="https://sites.google.com/a/kongu.edu/jefferson-k-english" target="_blank"><span class="yui">ENGLISH <i class="fa fa-bookmark"></i></span></a>
+                    </div>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="studentDropdown" role="button"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <span class="oiu">Students </span><i class="fa fa-gamepad" style="color: rgb(168, 198, 255);"></i>
+                    </a>
+                    <div  style="background-color: black; " class="dropdown-menu" aria-labelledby="studentDropdown">
+                        <a class="dropdown-item" href="bio data.html"
+                            target="_blank" style="color: yellow;"  ><span class="yui">Bio Data</span></a>
+                    </div>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="studentDropdown" role="button"
+                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" >
+                            <span class="oiu"> Time Table</span> <i class="fa fa-table" style="color: rgb(168, 198, 255);"></i>
+                    </a>
+                        <div  style="background-color: black; "  class="dropdown-menu" aria-labelledby="studentDropdown">
+                            <a class="dropdown-item" href="thubnails/timetable (2).html" 
+                                target="_blank" style="color: yellow;" ><span class="yui">ODD SEM - I </span></a>
+                        </div>
+                </li>
+
+            </ul>
+        </div>
+    </nav>
+    <div id="carouselExample" class="carousel slide" data-ride="carousel" style="margin-top: 50px; width: 400px; height: 400px; ">
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img style="height: 400px;" src="https://images.pexels.com/photos/2182863/pexels-photo-2182863.jpeg?auto=compress&cs=tinysrgb&w=800" class="d-block w-100" alt="AI Image 2">
+            </div>
+            
+            <div class="carousel-item">
+                <img src="https://images.pexels.com/photos/777001/pexels-photo-777001.jpeg?auto=compress&cs=tinysrgb&w=800" class="d-block w-100" alt="AI Image 3">
+            </div>
+            
+            <div class="carousel-item">
+                <img src="https://images.pexels.com/photos/2047905/pexels-photo-2047905.jpeg?auto=compress&cs=tinysrgb&w=800" class="d-block w-100" alt="AI Image 4">
+            </div>
+            
+            <div class="carousel-item">
+                <img src="https://images.pexels.com/photos/2330137/pexels-photo-2330137.jpeg?auto=compress&cs=tinysrgb&w=800" class="d-block w-100" alt="AI Image 4">
+            </div>
+            
+            <div class="carousel-item">
+                <img src="https://images.pexels.com/photos/2582932/pexels-photo-2582932.jpeg?auto=compress&cs=tinysrgb&w=800" class="d-block w-100" alt="AI Image 4">
+            </div>
+            
+            <div class="carousel-item">
+                <img src="https://images.pexels.com/photos/2481177/pexels-photo-2481177.jpeg?auto=compress&cs=tinysrgb&w=800" class="d-block w-100" alt="AI Image 4">
+            </div>
+        </div>
+    
+        <a class="carousel-control-prev" href="#carouselExample" role="button" data-slide="prev">
+            <span class="carousel-control-prev-icon" ></span>
+            <span class="sr-only">Previous</span>
+        </a>
+        <a class="carousel-control-next" href="#carouselExample" role="button" data-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+        </a>
+    </div>
+    
+<div class="container mt-5" >
+    
+
+    <!-- Pagination -->
+    <nav aria-label="Page navigation" >
+        <ul class="pagination">
+            <li class="page-item">
+                <a class="page-link" href="#" aria-label="Previous" style="background-color: black; border-color: darkorange; color: goldenrod;"  >
+                    <span aria-hidden="true">&laquo;</span>
+                </a>
+            </li>
+            <li target="_blank" class="page-item"><a target="_blank" style="background-color: black; color: goldenrod; border-color: darkorange;" class="page-link" href="https://www.kongu.ac.in/placement.php">  <i class="fa fa-heart"></i></a></li>
+            <li class="page-item" ><a  target="_blank" style="background-color: black;color:goldenrod ; border-color: darkorange;" class="page-link" href="https://www.kongu.ac.in/ranking.php">  <i class="fa fa-bars"></i></a></li>
+            <li class="page-item"><a  target="_blank" style="background-color: black;color:goldenrod ; border-color: darkorange;" class="page-link" href="https://www.kongu.ac.in/achievements.php">  <i class="fa fa-car"></i></a></li>
+            <li class="page-item"><a  target="_blank" style="background-color: black;color: goldenrod; border-color: darkorange;" class="page-link" href="https://www.kongu.ac.in/achievements.php">  <i class="fa fa-file"></i></a></li>
+            
+            <li class="page-item">
+                <a class="page-link" href="#" aria-label="Next" style="background-color: black; border-color: darkorange; color: goldenrod;"  >
+                    <span aria-hidden="true">&raquo;</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+
+</div>
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+
+</body>
+
+</html>
